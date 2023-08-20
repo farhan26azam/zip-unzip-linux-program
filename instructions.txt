@@ -1,0 +1,35 @@
+HOW TO COMPILE THE C FILES:
+1. To compile the zip.c file use the following command:
+gcc -o zip zip.c -lm
+
+2. To compile the unzip file use the following command:
+gcc -o unzip unzip.c
+
+-----------------------------------------------------------------------
+HOW TO RUN EXE FILES:
+1. To run zip exe use the following command:
+
+./zip <inputfile.txt> <number of threads> <outputfile>
+
+for example: 
+
+If file name is 'test.txt'
+number of threads are 20
+
+use : ./zip test.txt 20 test
+
+This will create two files: zipped_test.txt and test_encoding.bin
+------------------------------------------------------------------------
+2. To run the unzip exe use the following command:
+
+./unzip <zipped_file_name.txt> <number of threads> <unzipped_file_name>
+
+Continuing above example, to unzip the file zipped_test.txt
+
+use: ./unzip zipped_test.txt 1 testout
+
+Note: Number of threads for unzip should be 1 since parallel unzip was not required.
+------------------------------------------------------------------------
+
+
+
